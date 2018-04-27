@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Musteri Kayıt</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h3>Kayit için Lütfen bilgilerinizi Giriniz</h3>
+		<table id="myKayit">
+			<tr>
+				<td><p:outputLabel value="İsim  :   "></p:outputLabel></td>
+				<td><p:inputText id="name" value="#{musteriKayitBean.isim}" /></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Soyisim  :   "></p:outputLabel></td>
+				<td><p:inputText id="surname" value="#{musteriKayitBean.soyisim}" /></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Adres  :   "></p:outputLabel></td>
+				<td><p:inputText value="#{musteriKayitBean.adres}" /></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Mail  :   "></p:outputLabel></td>
+				<td><p:inputText value="#{musteriKayitBean.mail}"></p:inputText></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Telefon  :   "></p:outputLabel></td>
+				<td><p:inputText value="#{musteriKayitBean.telefon}"></p:inputText></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Şifre  :   "></p:outputLabel></td>
+				<td><p:password id="password" value="#{musteriKayitBean.password}"></p:password></td>
+			</tr>
+
+			<tr>
+				<td><p:outputLabel value="Şifre Tekrar :   "></p:outputLabel></td>
+				<td><p:password id="tekrar_pass" value="#{musteriKayitBean.password}"></p:password></td>
+			</tr>
+
+		</table>
+		<br></br>
+		<h:commandButton value="KAYIT"
+			action="#{musteriKayitBean.addMusteriKayit}" />
+
+
+	</h:form>
+</h:body>
+</html>
